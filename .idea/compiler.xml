@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wallet_applications" />
+        <module name="wallet_logs" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="finance" target="21" />
+      <module name="systemlogs" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="finance" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="payment_applications" options="" />
+      <module name="systemlogs" options="-parameters" />
+      <module name="wallet_applications" options="-parameters" />
+      <module name="wallet_logs" options="-parameters" />
+    </option>
+  </component>
+</project>

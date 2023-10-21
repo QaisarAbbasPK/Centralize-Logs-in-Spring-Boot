@@ -1,0 +1,24 @@
+server:
+  port=9000
+
+
+spring:
+  application:
+      name="Gateway"
+  cloud:
+    gateway:
+      routes:
+        - id: posts
+          uri: https://jsonplaceholder.typicode.com
+          predicates:
+            - Path=/posts/**
+
+        - id: wallet
+          uri: http://localhost:8000
+          predicates:
+            - Path=/api/v1/**
+            - Method=POST,GET
+
+logging:
+  level:
+    org.springframework.cloud.gateway.handler.RoutePredicateHandlerMapping: DEBUG
